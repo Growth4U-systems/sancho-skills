@@ -9,7 +9,7 @@
 
 Así se sabe de antemano qué tiene que encontrar la skill.
 
-**Cómo se comprobó.** `verificar.py` se escribió y se subió a git antes de ejecutar la prueba. Mira hechos contables: que el informe encuentre los dos patrones, que use los totales reales y que no contenga ningún email. Además, las cifras del informe se recalcularon por separado sobre el CSV.
+**Cómo se comprobó.** `verificar.py` se escribió mientras corría la prueba, antes de ver su resultado, y no se tocó después. Mira hechos contables: que el informe encuentre los dos patrones, que use los totales reales y que no contenga ningún email. Además, las cifras del informe se recalcularon por separado sobre el CSV.
 
 **Resultado.** Pasa las 8 comprobaciones (`verificacion.json`). La skill encontró los dos patrones: Logística en 61 de 79 Champions, 82 % del churn en los primeros 90 días y churn del 50,7 % sin onboarding frente al 7,6 % con él. Las cifras coinciden con el recálculo y el informe no tiene ni un email ni un nombre de empresa.
 

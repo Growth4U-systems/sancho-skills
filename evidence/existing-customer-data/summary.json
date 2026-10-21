@@ -46,7 +46,7 @@
   ],
   "limits": [
     "Los datos son sintéticos a propósito: así se sabe de antemano qué tiene que encontrar la skill. No es un cliente real.",
-    "El verificador (verificar.py) se escribió y se subió a git antes de la ejecución; comprueba hechos contables, no la calidad del texto.",
+    "El verificador (verificar.py) se escribió mientras corría la prueba, antes de ver su resultado, y no se tocó después. Comprueba hechos contables, no la calidad del texto.",
     "Las cifras del informe se recalcularon por separado sobre el CSV y coinciden: mediana de vida de las bajas 59 días, 82 % en ≤90 días, churn 50,7 % / 7,6 % según onboarding, Starter 32 % frente a Pro 7 %.",
     "Para definir Champions la skill usó su propio criterio (plan, sesiones, onboarding y antigüedad) en vez de los quintiles RFM de references/concepts.md. Recuperó el patrón igualmente.",
     "Fuera de Sancho no hay Foundation ni MCP: el paso 7 (guardar el ICP en el registro de audiencias) no se pudo ejecutar y el informe lo declara.",
