@@ -1,0 +1,365 @@
+{
+  "repo": "Growth4U-systems/sancho-skills",
+  "generatedAt": "2026-10-21",
+  "skills": [
+    {
+      "slug": "market-intelligence",
+      "name": "market-intelligence",
+      "title": "Market intelligence",
+      "description": "Market analysis: TAM, trends, segments, competitive landscape, customer segmentation, regulatory impact. Use when: analyzing a market for a client, understanding competitive dynamics, sizing a market opportunity, identifying customer segments and their pain points, mapping regulatory constraints for marketing. Produces a 5-part report (Market Overview, Competitive Intelligence, Customer Segmentation, Trends, Opportunities). NOT for: selecting which segments to attack (use niche-discovery), analyzing a specific competitor in depth (use competitor-intelligence), or creating content (use content skills).",
+      "area": "Research",
+      "agent": "Hamete",
+      "output": "Informe de mercado: TAM, segmentos, tendencias y competencia",
+      "version": "6.3",
+      "updated": "2026-09-13",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md"
+      ],
+      "contextOptional": [
+        "brand/{slug}/site-audit/trust-score/trust-score.current.md",
+        "brand/{slug}/market-and-us/competitors/competitors.current.md",
+        "brand/{slug}/market-and-us/self/self.current.md"
+      ],
+      "sanchoTools": [
+        "sancho_get_skill",
+        "sancho_patch_document",
+        "sancho_update_document"
+      ],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "evals/evals.json",
+        "references/checklist.md",
+        "references/concepts.md",
+        "references/hydration.md",
+        "references/prompt.md",
+        "references/schema.md"
+      ],
+      "bytes": 58111,
+      "source": {
+        "commit": "e9ebfa85cfba",
+        "path": "skills/market-intelligence"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "existing-customer-data",
+      "name": "existing-customer-data",
+      "title": "Análisis de clientes",
+      "description": "Analyze existing customer/CRM data: RFM segmentation, behavioral clustering, churn patterns, LTV analysis, upgrade patterns. OPTIONAL pillar — skip if pre-launch, no CRM access, or <50 customers. Use when: client has >50 customers with CRM data available and wants data-driven ICP refinement, churn reduction, or segment optimization. Produces Champions profile, RFM segments, churn patterns, LTV by segment, and actionable recommendations for ICP/positioning/content. NOT for: pre-launch companies, assumption-based ICP (use niche-discovery-100x), or general market research (use market-intelligence).",
+      "area": "Datos de clientes",
+      "agent": "Hamete",
+      "output": "Segmentos RFM, perfil de Champions, churn y LTV",
+      "version": "2.1",
+      "updated": "2026-09-24",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [
+        "sancho_table_get",
+        "sancho_table_list",
+        "sancho_table_mutate"
+      ],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/checklist.md",
+        "references/concepts.md",
+        "references/hydration.md",
+        "references/prompt.md",
+        "references/schema.md"
+      ],
+      "bytes": 18340,
+      "source": {
+        "commit": "44bb36f41b8a",
+        "path": "skills/existing-customer-data"
+      },
+      "redacted": 0,
+      "evidence": "evidence/existing-customer-data"
+    },
+    {
+      "slug": "swot-analysis",
+      "name": "swot-analysis",
+      "title": "Análisis DAFO",
+      "description": "SWOT analysis + TOWS strategies + ICE prioritization from upstream intelligence. Use when: building strategic analysis from self-intelligence, competitor-intelligence, and market-intelligence data. Produces evidence-based 4-quadrant SWOT, TOWS cross-strategies (SO/ST/WO/WT), and ICE-prioritized action plan. Requires at least Lite-done: self-intelligence (confirmed S/W), competitor-intelligence (per-competitor synthesis, vulnerabilities), market-intelligence (trends, TAM). NOT for: general market analysis (use market-intelligence), competitor deep-dives (use competitor-intelligence), or niche selection (use niche-discovery-100x).",
+      "area": "Estrategia",
+      "agent": "Hamete",
+      "output": "DAFO + TOWS + priorización ICE",
+      "version": "3.0",
+      "updated": "2026-02-27",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/market-and-us/self/self.current.md",
+        "brand/{slug}/market-and-us/competitors/competitors.current.md",
+        "brand/{slug}/market-and-us/market/market.current.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [
+        "sancho_get_skill",
+        "sancho_patch_document",
+        "sancho_render_document_html",
+        "sancho_update_document"
+      ],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/checklist.md",
+        "references/concepts.md",
+        "references/hydration.md",
+        "references/prompt.md",
+        "references/schema.md"
+      ],
+      "bytes": 32526,
+      "source": {
+        "commit": "d5e18f5537ac",
+        "path": "skills/swot-analysis"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "channel-prioritization",
+      "name": "channel-prioritization",
+      "title": "Priorización de canales",
+      "description": "Pick best marketing channels to activate.",
+      "area": "Canales",
+      "agent": null,
+      "output": "Canales a activar con su puntuación",
+      "version": "1.0",
+      "updated": "2026-09-29",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/go-to-market/positioning/*/*.current.md",
+        "brand/{slug}/market-and-us/competitors/competitors.current.md",
+        "brand/{slug}/market-and-us/self/self.current.md",
+        "brand/{slug}/operational/stack.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/channel-scoring-matrix.md",
+        "references/checklist.md"
+      ],
+      "bytes": 30766,
+      "source": {
+        "commit": "86199ebdfdab",
+        "path": "skills/channel-prioritization"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "landing-pages",
+      "name": "landing-pages",
+      "title": "Landing pages",
+      "description": "Create or improve landing pages for a specific offer, audience, campaign, keyword, or ECP, and the brand homepage built from the General audience. Use when the user asks for a landing page, campaign page, offer page, vertical page, lead-capture page, homepage mockup, or conversion-focused web page. Combines positioning, persuasive page structure, page copy, trust signals, CTA hierarchy, and handoff-ready requirements for design or implementation. For general copy on an existing page, see copywriting. For CRO review of an existing page, see page-cro. For ad copy, see direct-response-copy.",
+      "area": "Web y CRO",
+      "agent": "Dulcinea",
+      "output": "Estructura y copy de landing",
+      "version": "1.5",
+      "updated": "2026-10-07",
+      "userInvocable": true,
+      "contextRequired": [],
+      "contextOptional": [],
+      "sanchoTools": [
+        "sancho_get_document",
+        "sancho_share_create_link",
+        "sancho_table_get",
+        "sancho_table_list",
+        "sancho_table_mutate"
+      ],
+      "requiresSancho": true,
+      "hasScripts": true,
+      "files": [
+        "SKILL.md",
+        "references/homepage.md",
+        "references/niche-landing.md",
+        "scripts/build-niche-landings.mts"
+      ],
+      "bytes": 35292,
+      "source": {
+        "commit": "8225614cacba",
+        "path": "skills/landing-pages"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "company-finder",
+      "name": "company-finder",
+      "title": "Buscador de empresas",
+      "description": "Find ICP-matching companies.",
+      "area": "Prospección",
+      "agent": "Rocinante",
+      "output": "Lista de empresas que encajan con el ICP",
+      "version": "1.0",
+      "updated": "2026-08-30",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/market-and-us/competitors/competitors.current.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/icp-to-filters.md",
+        "references/tool-comparison.md"
+      ],
+      "bytes": 36412,
+      "source": {
+        "commit": "77e6fc5803cd",
+        "path": "skills/company-finder"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "decision-maker-finder",
+      "name": "decision-maker-finder",
+      "title": "Buscador de decisores",
+      "description": "Find decision makers at target companies.",
+      "area": "Prospección",
+      "agent": "Rocinante",
+      "output": "Decisores por empresa objetivo",
+      "version": "1.0",
+      "updated": "2026-08-30",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/role-mapping.md",
+        "references/validation-criteria.md"
+      ],
+      "bytes": 27531,
+      "source": {
+        "commit": "77e6fc5803cd",
+        "path": "skills/decision-maker-finder"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "sales-call-prep",
+      "name": "sales-call-prep",
+      "title": "Preparación de llamadas",
+      "description": "Prepares daily and weekly sales-call briefings from Sancho's Nango-backed CRM read model and approved local intelligence.",
+      "area": "Ventas",
+      "agent": "Rocinante",
+      "output": "Briefing diario y semanal de llamadas comerciales",
+      "version": "3.0",
+      "updated": "2026-08-30",
+      "userInvocable": true,
+      "contextRequired": [
+        "brand/{slug}/lead-tracking-config.json",
+        "brand/{slug}/leads/"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md"
+      ],
+      "bytes": 3403,
+      "source": {
+        "commit": "77e6fc5803cd",
+        "path": "skills/sales-call-prep"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "signal-definition",
+      "name": "signal-definition",
+      "title": "Definición de señales",
+      "description": "Define marketing automation triggers.",
+      "area": "Señales",
+      "agent": null,
+      "output": "Disparadores de automatización",
+      "version": "1.0",
+      "updated": "2026-09-01",
+      "userInvocable": false,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/signal-types.md"
+      ],
+      "bytes": 21194,
+      "source": {
+        "commit": "22ceda74de63",
+        "path": "skills/signal-definition"
+      },
+      "redacted": 0,
+      "evidence": null
+    },
+    {
+      "slug": "signal-monitor",
+      "name": "signal-monitor",
+      "title": "Monitor de señales",
+      "description": "Monitor signals and alert on triggers.",
+      "area": "Señales",
+      "agent": "Hamete",
+      "output": "Alertas cuando salta una señal",
+      "version": "1.0",
+      "updated": "2026-08-30",
+      "userInvocable": false,
+      "contextRequired": [
+        "brand/{slug}/company-brief/company-brief.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md",
+        "brand/{slug}/go-to-market/ecps/ecps.current.md"
+      ],
+      "contextOptional": [],
+      "sanchoTools": [],
+      "requiresSancho": true,
+      "hasScripts": false,
+      "files": [
+        "SKILL.md",
+        "references/apify-actors-for-signals.md",
+        "references/monitoring-tools.md"
+      ],
+      "bytes": 15764,
+      "source": {
+        "commit": "77e6fc5803cd",
+        "path": "skills/signal-monitor"
+      },
+      "redacted": 0,
+      "evidence": null
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "repo": "Growth4U-systems/sancho-skills",
+  "skills": [
+    {
+      "slug": "market-intelligence",
+      "title": "Market intelligence",
+      "area": "Research",
+      "agent": "Hamete",
+      "output": "Informe de mercado: TAM, segmentos, tendencias y competencia"
+    },
+    {
+      "slug": "existing-customer-data",
+      "title": "Análisis de clientes",
+      "area": "Datos de clientes",
+      "agent": "Hamete",
+      "output": "Segmentos RFM, perfil de Champions, churn y LTV"
+    },
+    {
+      "slug": "swot-analysis",
+      "title": "Análisis DAFO",
+      "area": "Estrategia",
+      "agent": "Hamete",
+      "output": "DAFO + TOWS + priorización ICE"
+    },
+    {
+      "slug": "channel-prioritization",
+      "title": "Priorización de canales",
+      "area": "Canales",
+      "agent": null,
+      "output": "Canales a activar con su puntuación"
+    },
+    {
+      "slug": "landing-pages",
+      "title": "Landing pages",
+      "area": "Web y CRO",
+      "agent": "Dulcinea",
+      "output": "Estructura y copy de landing"
+    },
+    {
+      "slug": "company-finder",
+      "title": "Buscador de empresas",
+      "area": "Prospección",
+      "agent": "Rocinante",
+      "output": "Lista de empresas que encajan con el ICP"
+    },
+    {
+      "slug": "decision-maker-finder",
+      "title": "Buscador de decisores",
+      "area": "Prospección",
+      "agent": "Rocinante",
+      "output": "Decisores por empresa objetivo"
+    },
+    {
+      "slug": "sales-call-prep",
+      "title": "Preparación de llamadas",
+      "area": "Ventas",
+      "agent": "Rocinante",
+      "output": "Briefing diario y semanal de llamadas comerciales"
+    },
+    {
+      "slug": "signal-definition",
+      "title": "Definición de señales",
+      "area": "Señales",
+      "agent": null,
+      "output": "Disparadores de automatización"
+    },
+    {
+      "slug": "signal-monitor",
+      "title": "Monitor de señales",
+      "area": "Señales",
+      "agent": "Hamete",
+      "output": "Alertas cuando salta una señal"
+    }
+  ]
+}

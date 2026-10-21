@@ -1,0 +1,24 @@
+<div class="sk" data-repo="Growth4U-systems/sancho-skills" data-base="https://raw.githubusercontent.com/Growth4U-systems/sancho-skills/main">
+  <p class="sk-status" role="note"><strong>Borrador.</strong> Directorio piloto con 10 skills. Fichas, versiones y pruebas se leen en directo del repositorio público.</p>
+
+  <section class="sk-view" id="sk-list" aria-labelledby="sk-title">
+    <header class="sk-hero sk-wrap">
+      <p class="sk-eyebrow">Skills de SanchoCMO</p>
+      <h1 id="sk-title">Las skills con las que trabajan los agentes de Sancho.</h1>
+      <p class="sk-lead">Cada skill es un SKILL.md que el agente carga cuando la tarea encaja. Publicamos las que usan Sansón, Dulcinea, Hamete y el resto del equipo, con licencia MIT, para que las instales en tu propio agente.</p>
+      <p class="sk-works"><span>Funciona con</span> Claude Code · Codex · Cursor · Gemini CLI · OpenCode · GitHub Copilot</p>
+    </header>
+
+    <div class="sk-wrap">
+      <div class="sk-tools">
+        <label class="sk-search"><span class="sk-sr">Buscar skills</span><input id="sk-q" type="search" placeholder="Busca por nombre o por lo que hace" autocomplete="off"></label>
+        <label class="sk-select"><span>Agente</span><select id="sk-agent"><option value="">Todos</option></select></label>
+      </div>
+      <div class="sk-chips" id="sk-areas" role="group" aria-label="Filtrar por área"></div>
+      <p class="sk-count" id="sk-count" aria-live="polite">Cargando el catálogo…</p>
+      <div class="sk-grid" id="sk-grid"></div>
+    </div>
+  </section>
+
+  <section class="sk-view sk-wrap" id="sk-detail" hidden aria-live="polite"></section>
+</div>

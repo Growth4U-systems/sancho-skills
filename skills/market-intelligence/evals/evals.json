@@ -1,0 +1,44 @@
+{
+  "skill_name": "market-intelligence",
+  "evals": [
+    {
+      "id": 0,
+      "name": "company-brief-only-does-not-block",
+      "prompt": "Ejecuta Market Intelligence para acme. Solo existe brand/acme/company-brief/company-brief.current.md; no existen Trust Score, Competitors, Self, PageSpeed ni Search Console.",
+      "expected_output": "Lee el Company Brief, genera una Market Scope Card y espera confirmación humana antes del research. No pide crear ningún artifact opcional. Tras confirmación, ejecuta /deep-research con qa-bot y escribe únicamente market.current.md.",
+      "files": [
+        "brand/acme/company-brief/company-brief.current.md"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "optional-sibling-enrichment",
+      "prompt": "Re-ejecuta Market Intelligence para acme. Existen Trust Score, Competitors y Self, pero contienen datos de fechas y niveles de confianza distintos.",
+      "expected_output": "Carga los artifacts como enriquecimientos opcionales con procedencia, no los trata como autoridad del scope ni como gates, conserva conflictos y pide resolución humana si cambian la definición del mercado.",
+      "files": [
+        "brand/acme/company-brief/company-brief.current.md",
+        "brand/acme/site-audit/trust-score/trust-score.current.md",
+        "brand/acme/market-and-us/competitors/competitors.current.md",
+        "brand/acme/market-and-us/self/self.current.md"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "market-handoff-does-not-write-competitors",
+      "prompt": "El deep research de Market descubre ocho actores relevantes. Completa la sección competitiva y entrega el análisis.",
+      "expected_output": "Produce un paisaje competitivo de categoría y un Competitor Intelligence Handoff con name, url, type, why_relevant, source, confidence y recommended_tier. No hace síntesis por competidor y no crea ni modifica competitors.current.md.",
+      "files": [
+        "brand/acme/company-brief/company-brief.current.md"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "presentation-is-downstream",
+      "prompt": "Completa Market Intelligence y deja el resultado preparado para convertirlo después a HTML.",
+      "expected_output": "Escribe el informe canónico y semántico en market.current.md, con evidencia y confianza. No añade Slide Summary, Slide KPIs, YAML de presentación ni instrucciones de layout; la capa HTML/presentación consume el documento downstream.",
+      "files": [
+        "brand/acme/company-brief/company-brief.current.md"
+      ]
+    }
+  ]
+}

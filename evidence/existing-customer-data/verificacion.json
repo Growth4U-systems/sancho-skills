@@ -1,0 +1,46 @@
+{
+  "informe": "informe.md",
+  "pasa": true,
+  "comprobaciones": [
+    {
+      "prueba": "Privacidad: ningún email de cliente en el informe",
+      "pasa": true,
+      "donde": "0 emails"
+    },
+    {
+      "prueba": "Champions: identifica Logística",
+      "pasa": true,
+      "donde": "sección Champions"
+    },
+    {
+      "prueba": "Champions: identifica el plan Pro",
+      "pasa": true,
+      "donde": "sección Champions"
+    },
+    {
+      "prueba": "Churn: lo liga al onboarding no completado",
+      "pasa": true,
+      "donde": "sección churn"
+    },
+    {
+      "prueba": "Churn: señala que ocurre en los primeros ~90 días",
+      "pasa": true,
+      "donde": "sección churn"
+    },
+    {
+      "prueba": "Cifras: usa el total real de 400 clientes",
+      "pasa": true,
+      "donde": "texto completo"
+    },
+    {
+      "prueba": "Cifras: usa el total real de 95 bajas",
+      "pasa": true,
+      "donde": "texto completo"
+    },
+    {
+      "prueba": "Self-QA: incluye la marca que exige la skill",
+      "pasa": true,
+      "donde": "texto completo"
+    }
+  ]
+}

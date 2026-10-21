@@ -1,0 +1,131 @@
+# Market Intelligence — Self-QA Checklist
+
+> El agente DEBE revisar este checklist ANTES de entregar el documento.
+> Para cada ítem: ✅ completado | ⚠️ no disponible (con justificación) | ❌ pendiente (seguir investigando)
+> Solo se entrega cuando todo es ✅ o ⚠️. Si hay algún ❌, volver a investigar.
+
+## TIERS DE PRIORIDAD
+- **P0 (bloqueante)**: Si falta alguno, NO SE ENTREGA. Investigar hasta resolver.
+- **P1 (importante)**: Debería estar. ⚠️ aceptable con justificación.
+- **P2 (nice-to-have)**: Mejora calidad pero no bloquea entrega.
+
+---
+
+## SCOPE + DEEP RESEARCH QA (P0 — bloqueante)
+
+- [ ] **Market Scope Card completa**: categoría, buyer/user, JTBD, geografía, cadena de valor, included, excluded, adjacencies y sizing unit
+- [ ] **Confirmación humana explícita registrada** antes del research caro
+- [ ] **Conflictos semánticos preguntados al usuario en la misma sesión externa**; silencio/runtime no cuentan como respuesta
+- [ ] **`/deep-research` ejecutado** con criterios de completitud y source inventory
+- [ ] **QA de `qa-bot` completado** y errores críticos corregidos
+- [ ] **TAM triangulado** con dos métodos o fuentes independientes cuando sea materialmente posible
+- [ ] **Outputs y señales opcionales no usados como gates**; ausencias marcadas `not_available`
+
+---
+
+## STORYTELLING (P2)
+
+- [ ] **Executive Narrative** existe al principio del documento (Parte 0)
+  - ✅ 1 página máximo, narrativa pura, CERO tablas
+  - ✅ Estructura: Situación → Tensión → Oportunidad
+  - ✅ Quien lea solo esto entiende el 80% del análisis
+
+- [ ] **Cada sección tiene apertura narrativa** (2-3 párrafos antes de datos/tablas)
+  - ✅ Explica QUÉ vamos a ver y POR QUÉ importa
+
+- [ ] **Cada subsección/tabla tiene cierre interpretativo**
+  - ✅ Párrafo "So what?" después de cada tabla/datos
+  - ✅ Párrafo "Implicación" que dice qué hacemos con esto
+
+- [ ] **Transiciones entre PARTES** (1→2, 2→3, 3→4, 4→5)
+  - ✅ Párrafo puente que conecta lo anterior con lo siguiente
+  - ✅ El documento fluye como argumento continuo, no secciones aisladas
+
+- [ ] **Tono de presentación**
+  - ✅ Escrito para CEO, no para analista
+  - ✅ Frases como "Esto significa que...", "La oportunidad está en...", "El riesgo es..."
+  - ✅ Evita lenguaje académico/técnico
+
+- [ ] **Cierre final** del documento
+  - ✅ 1-2 párrafos conclusivos que cierran la historia completa
+
+---
+
+## PARTE 1: Mercado (P0/P1)
+
+- [ ] **TAM cuantificado** con método explícito (bottom-up preferido, top-down aceptable con confianza indicada) **(P0)**
+- [ ] **Asunciones críticas listadas** para cada cifra del TAM
+- [ ] **Crecimiento histórico** 3-5 años con fuente
+- [ ] **Proyección 5 años** con fuente
+- [ ] **Segmentos listados** (3-5 mínimo) con tamaño o % del TAM cada uno
+- [ ] **Paisaje geográfico**: distribución por regiones, áreas de alto crecimiento vs saturación
+- [ ] **Madurez clasificada** (Emerging/Growing/Mature/Declining) con justificación y datos
+
+## PARTE 2: Competidores
+
+- [ ] **5-10 candidatos mapeados** (líderes + especialistas + alternativas + emergentes)
+- [ ] **Dominio y encaje verificados** para cada candidato dentro del scope confirmado
+- [ ] **Cuota de mercado** estimada o declarar "no disponible públicamente" con razón
+- [ ] **Arquetipos y estrategias de categoría** analizados sin síntesis por competidor ni deep-dives
+- [ ] **Amenazas** evaluadas (nuevos entrantes, tecnologías disruptivas, cambios regulatorios)
+- [ ] **`## Competitor Intelligence Handoff` presente** con `name`, `url`, `type`, `why_relevant`, `source`, `confidence`, `recommended_tier`
+- [ ] **Ownership respetado**: Market no crea `competitors.current.md`
+
+## PARTE 3: Clientes
+
+- [ ] **3-5 segmentos** con datos demográficos (edad, género, ingresos, ubicación)
+- [ ] **Psicográfico** por segmento (valores, actitudes, estilo de vida)
+- [ ] **Conductual** por segmento (patrones de compra, lealtad, preferencia de canal)
+- [ ] **Necesidades funcionales y drivers emocionales** identificados
+- [ ] **Puntos de dolor reales** (extraídos de foros, reviews, RRSS, quejas reales)
+- [ ] **Customer journey** (descubrimiento → consideración → decisión → compra)
+- [ ] **Personas** con nombre, motivaciones y pain points (NO requiere foto)
+
+## PARTE 4: Tendencias
+
+- [ ] **5-10 tendencias** con horizonte temporal (Now/6mo/1yr/3yr)
+- [ ] **Fuerzas impulsoras** por categoría (Technology, Consumer, Regulatory, Economic, Competitive, Societal)
+- [ ] **Comportamiento del consumidor**: evolución de preferencias, expectativas nuevas, dolor emergente
+- [ ] **Plataformas y contenido**: formatos en tendencia, relevancia para este mercado
+- [ ] **Regulación con marketing restrictions**: lo que se puede y NO se puede decir, con ejemplos concretos
+- [ ] **Enforcement**: nivel de enforcement real y penalizaciones
+
+## PARTE 5: Oportunidades
+
+- [ ] **Brechas de mercado** identificadas (necesidades no cubiertas, gaps en oferta)
+- [ ] **Oportunidades de crecimiento** priorizadas con lógica
+- [ ] **Atractivo del mercado** evaluado (alto/medio/bajo) con rationale
+- [ ] **Hoja de ruta** con cronograma y recursos necesarios
+
+## META (calidad) (P0)
+
+- [ ] **Cada claim tiene fuente inline** con URL **(P0)**
+- [ ] **Claims no verificables** marcados con ⚠️ y razón **(P0)**
+- [ ] **0 datos inventados** — todo rastreable a fuente original **(P0)**
+- [ ] **Cifras coherentes** entre secciones (TAM no contradice segmentos ni scope confirmado) **(P0)**
+- [ ] **5-10 URLs verificadas** con web.extract (spot-check aleatorio) **(P1)**
+- [ ] **Coherencia con Company Brief** y enrichments opcionales disponibles **(P1)**
+
+## ENTREGA (obligatorio)
+
+- [ ] **QA report referenciado** — se entrega la confianza y las limitaciones del deep research ya ejecutado
+
+---
+
+## Flujo de uso
+
+```
+1. Agente ejecuta el skill (investiga, escribe por partes)
+2. Al terminar borrador, lee este checklist
+3. Marca cada ítem:
+   - ✅ = completado con datos y fuente
+   - ⚠️ = investigado pero no disponible (con razón escrita)
+   - ❌ = falta — volver a investigar
+4. Si hay ❌ → investigar más (búsquedas adicionales enfocadas)
+5. Repetir hasta 0 ❌
+6. Spot-check: verificar 5-10 URLs con web.extract
+7. Cruzar cifras clave contra brand files
+8. SOLO ENTONCES entregar al usuario
+```
+
+**No se entrega ningún documento con ❌ pendientes.**

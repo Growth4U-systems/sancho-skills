@@ -1,0 +1,6 @@
+dist/
+.DS_Store
+__pycache__/
+redactions.private.json
+site/local.html
+site/cms-sim.html

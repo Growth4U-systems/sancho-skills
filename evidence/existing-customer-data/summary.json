@@ -1,0 +1,89 @@
+{
+  "skill": "existing-customer-data",
+  "summary": "Ejecutamos existing-customer-data sobre un export de CRM de 400 clientes sintéticos con dos patrones plantados. La skill los encontró los dos: los mejores clientes son de Logística en plan Pro y el churn se concentra en quien no completa el onboarding, en los primeros 90 días. Sus cifras coinciden con un cálculo independiente y el informe no contiene ningún email.",
+  "ranAt": "21-oct-2026, 07:02 a 07:06 UTC",
+  "runner": "Claude Code 2.1.168 en modo headless (claude -p), modelo claude-opus-4-8, sin ajustes de usuario ni MCP (--setting-sources project)",
+  "skillCommit": "idéntica a la publicada en este repo",
+  "inputDescription": "customers.csv: 400 clientes sintéticos de un SaaS B2B ficticio, generados con generar-datos.py (semilla fija)",
+  "verdict": "PASA las 8 comprobaciones del verificador",
+  "before": {
+    "pass": true
+  },
+  "after": {
+    "pass": true
+  },
+  "columns": [
+    "Lo plantado en los datos",
+    "Lo que dice el informe"
+  ],
+  "checkLabel": "Comprobación",
+  "checks": [
+    {
+      "label": "Perfil de los mejores clientes",
+      "before": "Logística + plan Pro",
+      "after": "Logística 61 de 79 Champions (77 %), Pro 75 %"
+    },
+    {
+      "label": "Cuándo se van",
+      "before": "78 de 95 bajas en ≤90 días",
+      "after": "82 % del churn en los primeros 90 días"
+    },
+    {
+      "label": "Por qué se van",
+      "before": "Onboarding no completado",
+      "after": "Churn 50,7 % sin onboarding vs 7,6 % con él"
+    },
+    {
+      "label": "Totales",
+      "before": "400 clientes, 95 bajas",
+      "after": "400 clientes, 95 bajas"
+    },
+    {
+      "label": "Privacidad",
+      "before": "400 emails en el CSV",
+      "after": "0 emails y 0 nombres de empresa en el informe"
+    }
+  ],
+  "limits": [
+    "Los datos son sintéticos a propósito: así se sabe de antemano qué tiene que encontrar la skill. No es un cliente real.",
+    "El verificador (verificar.py) se escribió y se subió a git antes de la ejecución; comprueba hechos contables, no la calidad del texto.",
+    "Las cifras del informe se recalcularon por separado sobre el CSV y coinciden: mediana de vida de las bajas 59 días, 82 % en ≤90 días, churn 50,7 % / 7,6 % según onboarding, Starter 32 % frente a Pro 7 %.",
+    "Para definir Champions la skill usó su propio criterio (plan, sesiones, onboarding y antigüedad) en vez de los quintiles RFM de references/concepts.md. Recuperó el patrón igualmente.",
+    "Fuera de Sancho no hay Foundation ni MCP: el paso 7 (guardar el ICP en el registro de audiencias) no se pudo ejecutar y el informe lo declara.",
+    "Coste de la ejecución: 0,88 USD, 3 min 34 s, 13 llamadas a herramientas."
+  ],
+  "files": [
+    {
+      "label": "customers.csv",
+      "path": "customers.csv"
+    },
+    {
+      "label": "generar-datos.py",
+      "path": "generar-datos.py"
+    },
+    {
+      "label": "informe.md",
+      "path": "informe.md"
+    },
+    {
+      "label": "verificar.py",
+      "path": "verificar.py"
+    },
+    {
+      "label": "verificacion.json",
+      "path": "verificacion.json"
+    },
+    {
+      "label": "analisis/ (scripts de la skill)",
+      "path": "analisis"
+    },
+    {
+      "label": "run.jsonl (registro completo)",
+      "path": "run.jsonl"
+    },
+    {
+      "label": "README.md",
+      "path": "README.md"
+    }
+  ]
+}
