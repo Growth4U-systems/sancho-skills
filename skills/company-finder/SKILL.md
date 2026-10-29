@@ -187,8 +187,8 @@ Actor: apify/linkedin-company-scraper
 Input: { "searchUrl": "[mapped LinkedIn search URL]", "maxItems": 200 }
 
 # Google Maps (for local/geo businesses)
-Actor: apify/google-maps-scraper
-Input: { "searchTerms": ["fintech Spain"], "maxItems": 200 }
+Actor: johnvc/google-maps-places-api
+Input: { "searchTerms": ["fintech Spain"], "maxResultsPerSearch": 200 }
 ```
 
 **During execution, report progress:**

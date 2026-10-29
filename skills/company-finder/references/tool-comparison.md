@@ -153,8 +153,8 @@ Usar este objeto solo como especificacion para un broker Sancho revisado o una e
 | Actor | Uso | Endpoint |
 |-------|-----|----------|
 | `apify/linkedin-company-scraper` | Scrape company data de LinkedIn | LinkedIn company search |
-| `apify/google-maps-scraper` | Empresas locales por geo + categoria | Google Maps search |
-| `apify/crunchbase-scraper` | Funding, investors, growth data | Crunchbase profiles |
+| `johnvc/google-maps-places-api` | Empresas locales por geo + categoria | Google Maps search |
+| `johnvc/crunchbase-company-api` | Funding, investors, growth data | Crunchbase profiles |
 | `epctex/apollo-io-scraper` | Apollo search sin API key propio | Apollo.io search |
 
 **Autenticacion:** propiedad del servicio por Nango. El playbook nunca recibe credenciales.
